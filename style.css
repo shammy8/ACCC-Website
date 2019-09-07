@@ -1,0 +1,248 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav, main {
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    background-color:#3f3f3f;
+    border-left: solid red 5px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.accc-title {
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.accc-title h1 {
+    font-weight: normal;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    padding-right: 25px;
+    line-height: 70px;
+}
+
+.nav-active{
+    transform: translateX(0%);
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.212);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 27px;
+    height: 2.5px;
+    background-color: red;
+    margin: 7px 3px;
+}
+
+.parallax-window {
+    height: calc(100vh - 70px);
+    background: transparent;
+    max-width: 100%; 
+    color: white;
+    margin-top: 70px;
+    position: relative;
+}
+
+#main-title-text {
+    width: 400px; 
+    margin: 0px 0px 0 7%; 
+    position: relative;
+    top: 20vh;
+}
+
+#main-title-text p {
+    font-size: 7vmin;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    margin-top: 10px;
+    margin-left: 30px;
+    height: 20px;
+    width: 20px;
+    border-right: solid white 2px;
+    border-bottom: solid white 2px;
+    transform: rotate(45deg);
+}
+
+.arrow-down-hover {
+    cursor: pointer;
+    animation: down 1s infinite;
+    animation-timing-function: ease in;
+    border-color: red;
+}
+
+@keyframes down {
+    0%, 100% {margin-top: 10px}
+    50% {margin-top: 25px;}
+}
+
+.div-for-panels{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.panel {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+.buttons {
+    top: 300px; 
+    position: relative; 
+    width: 60%;
+    min-width: 300px;
+    background-color: #3f3f3f ;
+    padding: 20px 0px;
+    border-left: 3px red solid;
+    font-weight: normal;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.buttons:hover a, .buttons:hover{
+    background-color: #fafafa;
+    font-weight: 700;
+    color: black;
+}
+
+#english {
+    background-image: url("images/aberdeen6.jpg");;
+}
+
+#cantonese {
+    background-image: url("images/aberdeen7.jpg");;
+}
+
+#mandarin {
+    background-image: url("images/aberdeen8.jpg");;
+}
+
+#sunday {
+    background-image: url("images/aberdeen4.jpg");;
+}
+
+footer {
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 5%;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    border-left: red solid 5px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.774);
+}
+
+#footer-logo {
+    height: 40px;
+}
+
+#footer-logo img {
+    max-height: 100%;
+}
+
+
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    nav ul{
+        position: absolute;
+        right: 0px;
+        /* height: 50vh; */
+        top: 70px;
+        background-color:#3f3f3f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-left: solid red 3px;
+    }
+    nav li {
+        line-height: 70px;
+    }
+    .burger {
+        display: block;
+    }
+    .div-for-panels{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    #main-title-text {
+        width: 50%;
+    }
+    footer {
+        font-size: 60%;
+    }
+
+}
+
+@media screen and (max-height: 400px) {
+    
+    header {
+        position: relative;
+        z-index: 1000;
+    }
+    .parallax-window {
+        height: 100vh;
+        background: transparent;
+        max-width: 100%; 
+        margin-top: 0px;
+    }
+    .prevent-smallscreen-overflow {
+        overflow-x: hidden;
+    }
+}
+
